@@ -123,65 +123,7 @@ class Subscriber(Node):
                             prev=23.600000381469727)
                         
                     ###################### trajeto ###########################################################################################
-                    print(self.visibility)
-                    ## Se tiver indiu
-                    if self.position_direction == 1:
-                        #if (math.atan2(0, 0) - math.atan2(self.points_info.predict_x, self.points_info.predict_y))* 180/math.pi + 90 > self.joint_states.position[0] * 180/pi:
-                         #   if self.old_ghost_position < (math.atan2(0, 0) - math.atan2(self.points_info.predict_x, self.points_info.predict_y))* 180/math.pi + 90 and self.old_ghost_position < 98:
-                        for i in range(30):
-                            omni.kit.commands.execute('TransformMultiPrimsSRTCpp',
-                            count=1,
-                            paths=[f'/World/Trajeto/ball_{i+1}'],
-                            new_translations=[-20 + self.points_info.predict_x[i] * 3.63,-18 + self.points_info.predict_y[i] * 3.63, self.points_info.predict_z[i]* 3.63],
-                            new_rotation_eulers=[90, 0.0, 0.0],
-                            new_rotation_orders=[0, 1, 2],
-                            new_scales=[1, 1, 1],
-                            old_translations=[0.0, 0.0, 0.0],
-                            old_rotation_eulers=[0.0, 0.0, 0.0],
-                            old_rotation_orders=[0, 1, 2],
-                            old_scales=[1.0, 1.0, 1.0],
-                            usd_context_name='',
-                            time_code=0.0)
-                            
-                    if self.position_direction == 2:
-                        pass
-
-
-                if self.altura < 0:    
-                    for i in range(18):
-                        omni.kit.commands.execute('TransformMultiPrimsSRTCpp',
-                        count=1,
-                        paths=[f'/World/WoodenCrate_A1'],
-                        new_translations=[0, -18.0, 18-i],
-                        new_rotation_eulers=[90, 0.0, 0.0],
-                        new_rotation_orders=[0, 1, 2],
-                        new_scales=[2.0, 2.0, 2.0],
-                        old_translations=[0.0, 0.0, 0.0],
-                        old_rotation_eulers=[0.0, 0.0, 0.0],
-                        old_rotation_orders=[0, 1, 2],
-                        old_scales=[1.0, 1.0, 1.0],
-                        usd_context_name='',
-                        time_code=0.0) 
-
-                        self.altura = i
-
-                if self.altura > 0:    
-                    for i in range(18):
-                        omni.kit.commands.execute('TransformMultiPrimsSRTCpp',
-                        count=1,
-                        paths=[f'/World/WoodenCrate_A1'],
-                        new_translations=[0, -18.0, i],
-                        new_rotation_eulers=[90, 0.0, 0.0],
-                        new_rotation_orders=[0, 1, 2],
-                        new_scales=[2.0, 2.0, 2.0],
-                        old_translations=[0.0, 0.0, 0.0],
-                        old_rotation_eulers=[0.0, 0.0, 0.0],
-                        old_rotation_orders=[0, 1, 2],
-                        old_scales=[1.0, 1.0, 1.0],
-                        usd_context_name='',
-                        time_code=0.0)  
-
-                        self.altura = i                 
+                                  
                                 
 
         # Cleanup
