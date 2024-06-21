@@ -47,7 +47,7 @@ class Subscriber(Node):
 
         # setting up the world with a cube
         assets_root_path = get_assets_root_path()
-        asset_path = "/root/colcon_ws/Aquatec_isaac/Grua/Grua_Modelagem/New_Grua.usd"
+        asset_path = "/root/colcon_ws/Aquatec_Isaac/Grua_Modelagem/New_Grua.usd"
 
         self.timeline = omni.timeline.get_timeline_interface()
         self.ros_world = World(stage_units_in_meters=1.0)
